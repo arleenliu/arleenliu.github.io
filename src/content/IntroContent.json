@@ -1,13 +1,10 @@
 {
-  "title": "Landing page template for developers & startups",
-  "text": "Beautifully designed templates using React.js, ant design and styled-components! Save weeks of time and build your landing page in minutes.",
+  "title": "Hi, I'm Arleen!",
+  "text": "Welcome to my website! This is a hub for all my content--find my blog, socials, and more here.",
   "button": [
     {
-      "title": "Explore"
-    },
-    {
-      "title": "Learn more",
-      "color": "#fff"
+      "title": "View CV",
+      "toLink": "/Arleen_Liu_Resume.pdf"
     }
   ]
 }

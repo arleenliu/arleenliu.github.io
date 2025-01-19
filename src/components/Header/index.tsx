@@ -3,7 +3,7 @@ import { Row, Col, Drawer } from "antd";
 import { withTranslation, TFunction } from "react-i18next";
 import Container from "../../common/Container";
 import { SvgIcon } from "../../common/SvgIcon";
-import { Button } from "../../common/Button";
+import { ButtonMailTo } from "../../common/Button";
 import {
   HeaderSection,
   LogoContainer,
@@ -18,6 +18,7 @@ import {
 
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
+  const blogSite = "https://arleenliu.wordpress.com/";
 
   const toggleButton = () => {
     setVisibility(!visible);
@@ -36,15 +37,14 @@ const Header = ({ t }: { t: TFunction }) => {
         <CustomNavLinkSmall onClick={() => scrollTo("about")}>
           <Span>{t("About")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("blog")}>
+        <CustomNavLinkSmall onClick={() => window.location.href=blogSite}>
           <Span>{t("Blog")}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall
           style={{ width: "180px" }}
-          onClick={() => scrollTo("contact")}
         >
           <Span>
-            <Button>{t("Contact")}</Button>
+            <ButtonMailTo mailto="mailto:arleenliu.al@gmail.com" label="Contact Me" />
           </Span>
         </CustomNavLinkSmall>
       </>
@@ -56,7 +56,7 @@ const Header = ({ t }: { t: TFunction }) => {
       <Container>
         <Row justify="space-between">
           <LogoContainer to="/" aria-label="homepage">
-            <SvgIcon src="logo.svg" width="101px" height="64px" />
+            <SvgIcon src="logo.svg" width="150px" height="64px" />
           </LogoContainer>
           <NotHidden>
             <MenuItem />

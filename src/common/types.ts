@@ -11,6 +11,11 @@ export interface ButtonProps {
   onClick?: () => void;
 }
 
+export interface ButtonMailToProps {
+  label: string;
+  mailto: string;
+}
+
 export interface SvgIconProps {
   src: string;
   width: string;

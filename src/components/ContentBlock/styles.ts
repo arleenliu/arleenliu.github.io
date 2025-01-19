@@ -57,6 +57,6 @@ export const ButtonWrapper = styled("div")`
   }
 
   button:last-child {
-    margin-left: 20px;
+    margin-left: 30%;
   }
 `;
