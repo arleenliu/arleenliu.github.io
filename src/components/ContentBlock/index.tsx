@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { Row, Col } from "antd";
 import { Fade } from "react-awesome-reveal";
 import { withTranslation } from "react-i18next";
@@ -52,15 +53,7 @@ const ContentBlock = ({
               {direction === "right" ? (
                 <ButtonWrapper>
                   {typeof button === "object" &&
-                    button.map(
-                      (
-                        item: {
-                          color?: string;
-                          title: string;
-                          toLink?: string;
-                        },
-                        id: number
-                      ) => {
+                    button.map((item, id) => {
                         return (
                           <Button
                             key={id}
@@ -77,15 +70,7 @@ const ContentBlock = ({
                 <ServiceWrapper>
                   <Row justify="space-between">
                     {typeof section === "object" &&
-                      section.map(
-                        (
-                          item: {
-                            title: string;
-                            content: string;
-                            icon: string;
-                          },
-                          id: number
-                        ) => {
+                      section.map((item, id) => {
                           return (
                             <Col key={id} span={11}>
                               <SvgIcon
@@ -110,4 +95,4 @@ const ContentBlock = ({
   );
 };
 
-export default withTranslation()(ContentBlock);
+export default withTranslation()(memo(ContentBlock));

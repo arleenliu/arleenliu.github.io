@@ -28,10 +28,20 @@ export const useForm = (validate: { (values: IValues): IValues }) => {
     const errors = validate(values);
     setFormState((prevState) => ({ ...prevState, errors }));
 
-    const url = ""; // Fill in your API URL here
+    // TODO: Replace with your Formspree endpoint, e.g.
+    // "https://formspree.io/f/YOUR_FORM_ID"
+    const url = "";
 
     try {
       if (Object.values(errors).every((error) => error === "")) {
+        if (!url) {
+          notification["error"]({
+            message: "Error",
+            description: "Contact form is not configured yet. Please reach out via email.",
+          });
+          return;
+        }
+
         const response = await fetch(url, {
           method: "POST",
           headers: {

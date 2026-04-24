@@ -5,6 +5,8 @@ import Header from "../components/Header";
 import routes from "./config";
 import { Styles } from "../styles/styles";
 
+const NotFound = lazy(() => import("../pages/NotFound"));
+
 const Router = () => {
   return (
     <Suspense fallback={null}>
@@ -21,6 +23,7 @@ const Router = () => {
             />
           );
         })}
+        <Route component={NotFound} />
       </Switch>
       <Footer />
     </Suspense>

@@ -18,7 +18,7 @@ import {
 
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
-  const blogSite = "https://arleenliu.wordpress.com/";
+  const blogSite = "https://arleenl.substack.com/";
 
   const toggleButton = () => {
     setVisibility(!visible);
@@ -37,7 +37,7 @@ const Header = ({ t }: { t: TFunction }) => {
         <CustomNavLinkSmall onClick={() => scrollTo("about")}>
           <Span>{t("About")}</Span>
         </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => window.location.href=blogSite}>
+        <CustomNavLinkSmall onClick={() => window.open(blogSite, "_blank", "noopener,noreferrer")}>
           <Span>{t("Blog")}</Span>
         </CustomNavLinkSmall>
         <CustomNavLinkSmall
