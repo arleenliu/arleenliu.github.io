@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Row, Col, Drawer } from "antd";
+import { Link } from "react-router-dom";
 import { withTranslation, TFunction } from "react-i18next";
 import Container from "../../common/Container";
 import { SvgIcon } from "../../common/SvgIcon";
@@ -14,42 +15,66 @@ import {
   Label,
   Outline,
   Span,
+  BlogNavWrapper,
+  BlogDropdown,
+  BlogDropdownItem,
+  MobileSubLink,
 } from "./styles";
+
+const SUBSTACK_URL = "https://arleenl.substack.com";
+const COOKING_URL = "https://www.instagram.com/arleencooks";
 
 const Header = ({ t }: { t: TFunction }) => {
   const [visible, setVisibility] = useState(false);
-  const blogSite = "https://arleenl.substack.com/";
 
   const toggleButton = () => {
     setVisibility(!visible);
   };
 
-  const MenuItem = () => {
-    const scrollTo = (id: string) => {
-      const element = document.getElementById(id) as HTMLDivElement;
-      element.scrollIntoView({
-        behavior: "smooth",
-      });
-      setVisibility(false);
-    };
-    return (
-      <>
-        <CustomNavLinkSmall onClick={() => scrollTo("about")}>
-          <Span>{t("About")}</Span>
-        </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => window.open(blogSite, "_blank", "noopener,noreferrer")}>
-          <Span>{t("Blog")}</Span>
-        </CustomNavLinkSmall>
-        <CustomNavLinkSmall
-          style={{ width: "180px" }}
-        >
-          <Span>
-            <ButtonMailTo mailto="mailto:arleenliu.al@gmail.com" label="Contact Me" />
-          </Span>
-        </CustomNavLinkSmall>
-      </>
-    );
+  const scrollTo = (id: string) => {
+    const element = document.getElementById(id) as HTMLDivElement;
+    element.scrollIntoView({ behavior: "smooth" });
+    setVisibility(false);
   };
+
+  // Desktop: hover dropdown over a /blog link
+  const BlogNavDesktop = () => (
+    <BlogNavWrapper>
+      <Link to="/blog" style={{ color: "inherit", textDecoration: "none" }}>
+        <Span>{t("Blog")}</Span>
+      </Link>
+      <BlogDropdown>
+        <BlogDropdownItem
+          href={SUBSTACK_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ✍&thinsp; Substack
+        </BlogDropdownItem>
+        <BlogDropdownItem
+          href={COOKING_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          🍳&thinsp; @arleencooks
+        </BlogDropdownItem>
+      </BlogDropdown>
+    </BlogNavWrapper>
+  );
+
+  // Shared items (About + Contact)
+  const CommonMenuItems = () => (
+    <>
+      <CustomNavLinkSmall onClick={() => scrollTo("about")}>
+        <Span>{t("About")}</Span>
+      </CustomNavLinkSmall>
+      <CustomNavLinkSmall style={{ width: "180px" }}>
+        <Span>
+          <ButtonMailTo mailto="mailto:arleenliu.al@gmail.com" label="Contact Me" />
+        </Span>
+      </CustomNavLinkSmall>
+    </>
+  );
 
   return (
     <HeaderSection>
@@ -59,7 +84,8 @@ const Header = ({ t }: { t: TFunction }) => {
             <SvgIcon src="logo.svg" width="150px" height="64px" />
           </LogoContainer>
           <NotHidden>
-            <MenuItem />
+            <BlogNavDesktop />
+            <CommonMenuItems />
           </NotHidden>
           <Burger onClick={toggleButton}>
             <Outline />
@@ -76,7 +102,29 @@ const Header = ({ t }: { t: TFunction }) => {
               </Col>
             </Label>
           </Col>
-          <MenuItem />
+          {/* Mobile: Blog link + flat sub-links */}
+          <CustomNavLinkSmall onClick={toggleButton}>
+            <Link to="/blog" style={{ color: "inherit", textDecoration: "none" }}>
+              <Span>{t("Blog")}</Span>
+            </Link>
+          </CustomNavLinkSmall>
+          <MobileSubLink
+            href={SUBSTACK_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={toggleButton}
+          >
+            ✍&thinsp; Substack
+          </MobileSubLink>
+          <MobileSubLink
+            href={COOKING_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={toggleButton}
+          >
+            🍳&thinsp; @arleencooks
+          </MobileSubLink>
+          <CommonMenuItems />
         </Drawer>
       </Container>
     </HeaderSection>
