@@ -1,0 +1,10 @@
+{
+  "title": "I also love to cook",
+  "text": "Outside of work I spend a lot of time in the kitchen experimenting with new recipes and cuisines. Follow along on my cooking Instagram where I share what I've been making.",
+  "button": [
+    {
+      "title": "See my cooking",
+      "toLink": "https://www.instagram.com/arleencooks"
+    }
+  ]
+}
