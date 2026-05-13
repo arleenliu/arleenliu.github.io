@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320">
+  <!-- Steam lines -->
+  <path d="M148 72 Q140 56 148 40 Q156 24 148 8" fill="none" stroke="#2e186a" stroke-width="4" stroke-linecap="round"/>
+  <path d="M200 72 Q192 56 200 40 Q208 24 200 8" fill="none" stroke="#2e186a" stroke-width="4" stroke-linecap="round"/>
+  <path d="M252 72 Q244 56 252 40 Q260 24 252 8" fill="none" stroke="#2e186a" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Pot body -->
+  <rect x="90" y="110" width="220" height="150" rx="16" ry="16" fill="#2e186a"/>
+  <!-- Pot shine -->
+  <rect x="108" y="124" width="60" height="10" rx="5" fill="white" opacity="0.15"/>
+
+  <!-- Pot rim -->
+  <rect x="78" y="96" width="244" height="22" rx="11" ry="11" fill="#1a0f4a"/>
+
+  <!-- Left handle -->
+  <rect x="46" y="110" width="48" height="22" rx="11" ry="11" fill="#1a0f4a"/>
+  <!-- Right handle -->
+  <rect x="306" y="110" width="48" height="22" rx="11" ry="11" fill="#1a0f4a"/>
+
+  <!-- Lid -->
+  <ellipse cx="200" cy="96" rx="100" ry="14" fill="#f86d2b" opacity="0.9"/>
+  <rect x="100" y="82" width="200" height="14" rx="4" fill="#f86d2b" opacity="0.9"/>
+  <!-- Lid knob -->
+  <rect x="186" y="68" width="28" height="16" rx="8" fill="#f86d2b"/>
+
+  <!-- Soup / contents visible at rim -->
+  <ellipse cx="200" cy="110" rx="100" ry="10" fill="#f4a952" opacity="0.6"/>
+
+  <!-- Wooden spoon -->
+  <rect x="240" y="58" width="10" height="130" rx="5" fill="#c8a97e" transform="rotate(-18 240 58)"/>
+  <ellipse cx="248" cy="64" rx="14" ry="10" fill="#c8a97e" transform="rotate(-18 248 64)"/>
+
+  <!-- Pot base / shadow -->
+  <ellipse cx="200" cy="262" rx="112" ry="12" fill="#2e186a" opacity="0.15"/>
+
+  <!-- Stove burner ring -->
+  <ellipse cx="200" cy="270" rx="90" ry="8" fill="none" stroke="#2e186a" stroke-width="4" opacity="0.3"/>
+  <ellipse cx="200" cy="270" rx="60" ry="5" fill="none" stroke="#2e186a" stroke-width="3" opacity="0.2"/>
+
+  <!-- Flame left -->
+  <path d="M148 270 Q138 250 150 240 Q145 258 155 258 Q148 245 158 238 Q158 255 165 255 Q160 242 170 236 Q168 256 178 260 Q170 268 148 270Z" fill="#f86d2b" opacity="0.85"/>
+  <!-- Flame right -->
+  <path d="M252 270 Q262 250 250 240 Q255 258 245 258 Q252 245 242 238 Q242 255 235 255 Q240 242 230 236 Q232 256 222 260 Q230 268 252 270Z" fill="#f86d2b" opacity="0.85"/>
+</svg>
