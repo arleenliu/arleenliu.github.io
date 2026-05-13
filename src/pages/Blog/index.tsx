@@ -87,7 +87,7 @@ const Blog = () => (
             <SvgIcon src="substack.svg" width="48px" height="48px" />
             <CardTitle>Writing</CardTitle>
             <CardText>
-              I write about technology, life, and whatever's on my mind on Substack.
+              I write about technology, life, and whatever's on my mind.
             </CardText>
             <CardLink
               href="https://arleenl.substack.com"
