@@ -49,7 +49,7 @@ const Header = ({ t }: { t: TFunction }) => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          ✍&thinsp; Substack
+          ✍&thinsp; Lifestyle Blog
         </BlogDropdownItem>
         <BlogDropdownItem
           href={COOKING_URL}
@@ -114,7 +114,7 @@ const Header = ({ t }: { t: TFunction }) => {
             rel="noopener noreferrer"
             onClick={toggleButton}
           >
-            ✍&thinsp; Substack
+            ✍&thinsp; Lifestyle Blog
           </MobileSubLink>
           <MobileSubLink
             href={COOKING_URL}
