@@ -95,8 +95,8 @@ const Footer = ({ t }: { t: TFunction }) => {
                 src="linkedin.svg"
               />
               <SocialLink
-                href="https://medium.com/@arleenliu/"
-                src="medium.svg"
+                href="https://arleenl.substack.com"
+                src="substack.svg"
               />
             </FooterContainer>
           </Row>
