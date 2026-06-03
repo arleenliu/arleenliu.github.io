@@ -1,5 +1,17 @@
 # CLAUDE.md
 
+## Personal Principles & Skills Reference
+
+Arleen maintains a folder of general coding principles, personal standards, and skills she applies across all projects. Before making significant design or implementation decisions on this site, check:
+
+```
+~/.claude/personal/
+```
+
+That directory (separate from this project) contains cross-project guidance — things like preferred code style, how to approach trade-offs, and skills she wants consistently applied. Treat it as a layer above this project's own rules: project-specific instructions here take precedence for site-specific concerns, but personal principles apply wherever this file is silent.
+
+---
+
 ## Project Overview
 
 Personal portfolio website for Arleen Liu, hosted at **arleenliu.com** via GitHub Pages.
