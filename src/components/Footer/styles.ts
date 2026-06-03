@@ -46,7 +46,6 @@ export const LogoContainer = styled("div")`
 export const Para = styled("div")`
   color: #18216d;
   font-size: 14px;
-  width: 70%;
 `;
 
 export const Large = styled(Link)`
@@ -88,15 +87,15 @@ export const Empty = styled("div")`
 `;
 
 export const FooterContainer = styled("div")`
-  max-width: 510px;
-  width: 100%;
   display: flex;
-  justify-content: space-between;
-  text-align: center;
   align-items: center;
+  gap: 1.25rem;
   transition: all 0.1s ease-in-out;
 
   a {
+    display: flex;
+    align-items: center;
+
     &:hover,
     &:active,
     &:focus {
@@ -106,17 +105,8 @@ export const FooterContainer = styled("div")`
     }
   }
 
-  @media screen and (max-width: 769px) {
-    width: auto;
-
-    a:not(:last-child) {
-      display: none;
-    }
-  }
-
   div {
     cursor: pointer;
-    margin-right: 15px;
     width: 25px;
     height: 25px;
 

@@ -50,13 +50,13 @@ const Footer = ({ t }: { t: TFunction }) => {
       <FooterSection>
         <Container>
           <Row justify="space-between">
-            <Col lg={10} md={10} sm={12} xs={12}>
+            <Col lg={10} md={10} sm={14} xs={24}>
               <Language>{t("Contact")}</Language>
               <Para>
                 {t(`Have questions? Feel free to reach out!`)}
               </Para>
             </Col>
-            <Col lg={8} md={8} sm={12} xs={12}>
+            <Col lg={8} md={8} sm={10} xs={24}>
             <a href="mailto:arleenliu.al@gmail.com">
                 <Chat>{t(`Let's Chat`)}</Chat>
               </a>

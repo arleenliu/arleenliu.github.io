@@ -5,6 +5,10 @@ import Container from "../../common/Container";
 
 const PageWrapper = styled("section")`
   padding: 4rem 0 6rem;
+
+  @media only screen and (max-width: 575px) {
+    padding: 2.5rem 0 3rem;
+  }
 `;
 
 const PageTitle = styled("h2")`
@@ -12,6 +16,10 @@ const PageTitle = styled("h2")`
   color: #18216d;
   margin-bottom: 0.5rem;
   text-align: center;
+
+  @media only screen and (max-width: 575px) {
+    font-size: 1.9rem;
+  }
 `;
 
 const PageSubtitle = styled("p")`
